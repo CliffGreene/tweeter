@@ -18,8 +18,13 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  
 }
-
+body main section {
+  padding-left: 5%;
+  padding-right: 5%;
+  color: rgb(75, 61, 49);
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

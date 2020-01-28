@@ -1,0 +1,45 @@
+body main section form {
+    padding: 20px;
+  
+    
+    margin-right: 0px;
+    z-index: 10;
+    font-size: 25px;
+    font-family: "source sans pro";
+     
+    }
+body main section form textarea {
+    background-color:rgba(0, 0, 0, 0);
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    outline:none;
+    padding-top: 20px;
+    font-size: 20px;
+    
+    color: rgb(75, 61, 49);
+    
+    
+    border-bottom-width: 4px;
+    border-bottom-color:rgb(75, 61, 49);
+    width: 100%;
+ }
+ body main section form input {
+     font-size: 20px;
+     color: rgb(255, 255, 255);
+     background-color: #4056A1;
+     font-family: bungee;
+ }
+ body main section form span {
+    position: absolute;
+    
+    color: rgb(75, 61, 49);
+  
+    line-height: 30px;
+    right: 75px;
+    
+    z-index: 10;
+    font-size: 25px;
+    font-family: "bungee";
+
+ }
