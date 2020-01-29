@@ -1,16 +1,16 @@
-header {
+.profile-header {
     position: relative;
     color: #ffffff;
     background-color: #fff4c7;
     background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
-    height: 400px;
+    height: px;
     width: 100%;
-    z-index: 9;
+    z-index: 4;
     
     font-family: "source sans pro";
 }
     header div img {
-        height:  200px;  
+       
         margin-top: 120px;
            
           

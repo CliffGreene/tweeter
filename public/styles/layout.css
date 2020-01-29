@@ -18,12 +18,112 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  height: 2000px
   
 }
+
 body main section {
+  background-color: #f4f1ec;;
   padding-left: 5%;
   padding-right: 5%;
   color: rgb(75, 61, 49);
+}
+
+.tweet-header {
+position: relative;
+  background-color: #f4f1ec;;
+z-index: 10;
+height: 210px;
+border: solid;
+margin: 10px 4px 0px 0px;
+
+}
+
+.tweet h1 {
+color: rgb(75, 61, 49);
+
+
+padding: 7px;
+
+
+border-color: rgb(75, 61, 49);
+margin: 50px 10px 10px 10px;
+background-color: #f4f1ec;
+font-size: 16px;
+text-align:right;
+font-family: source sans pro;
+border: solid;
+border-top-width: 0px;
+border-right-width: 0px;
+border-left-width: 0px;
+
+}
+.tweeter-name{
+  position: absolute;
+  top: 0px;
+  right: 426.625;
+  left: 75px;
+  height: 100px;
+  font-family: source sans pro
+}
+.tweeter-handle{
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  left: 75px;
+  height: 100px;
+  font-family: source sans pro;
+  color: cornflowerblue;
+  visibility: hidden;
+  
+}
+.tweet .tweet-avatar {
+margin: 10px 0 0 10px;
+
+  height: 50px;
+  
+
+}
+ .date{
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 0px;
+ }
+ .tweet-foot {
+   display: flex;
+   justify-content: space-between;
+ }
+.tweet-logos {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+.tweet {
+
+
+
+height: 205px;
+margin-right: 35px;
+margin-left: 45px;
+}
+.shadow {
+  position: absolute;
+  
+width: 100%;
+  height: 210px;
+margin-right: 35px;
+margin-left: 0px;
+z-index: 12;
+border: solid;
+border-color: cornflowerblue;
+border-right-width: 0px;
+border-left-width: 0px;
+border-bottom-width: 3px;
+border-top-width: 0px;
+visibility: hidden;
+
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

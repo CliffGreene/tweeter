@@ -18,6 +18,8 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-mouseover.js"></script>
+  
   </head>
 
   <body>
@@ -26,7 +28,7 @@
       <span >tweeter</span>
     </nav>
     
-    <header link rel="styles" href="styles/header.css">
+    <header class="profile-header" link rel="styles" href="styles/header.css">
       <div style="text-align: center;">
           <img style="text-align: center" src="/images/profile-hex.png"> 
       </div>
@@ -37,19 +39,22 @@
     </header>
     <!-- Page-specific (main) content here -->
     
- 
-    
-    
-    <main class="container"  >
+    <main id="tweets-container"  >
       <section class="new-tweet" >
         
-        <form method="POST" action="/tweets" link rel="styles" href="styles/new-tweet.css">
-          <textarea class="something" style="resize: none;" name="text" placeholder="What are you humming about?"></textarea>
+        <form method="POST" id="sendForm" action="/tweets" link rel="styles" href="styles/new-tweet.css">
+          <textarea class="newTweetField" style="resize: none;" name="text" placeholder="Do you think it be like it is? Or don't it?"></textarea>
           <div></div>
-          <input type="submit" value="Tweet">
+          <input  type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
-    </main>
+    </main> 
+
+      <article class="tweet" >  
+        
+      </article> 
+      
+    
   </body>
 </html>
