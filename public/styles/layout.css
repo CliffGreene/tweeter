@@ -37,6 +37,7 @@ height: 210px;
 border: solid;
 margin: 10px 4px 0px 0px;
 
+
 }
 
 .tweet h1 {
@@ -47,7 +48,7 @@ padding: 7px;
 
 
 border-color: rgb(75, 61, 49);
-margin: 50px 10px 10px 10px;
+margin: 5px 10px 10px 10px;
 background-color: #f4f1ec;
 font-size: 16px;
 text-align:right;
@@ -56,6 +57,7 @@ border: solid;
 border-top-width: 0px;
 border-right-width: 0px;
 border-left-width: 0px;
+overflow-wrap: break-word;
 
 }
 .tweeter-name{
@@ -86,28 +88,67 @@ margin: 10px 0 0 10px;
 
 }
  .date{
+  position: absolute;
   font-size: 16px;
   margin-left: 10px;
-  margin-top: 0px;
+  margin-bottom: 5px;
+  bottom: 0px;
  }
  .tweet-foot {
    display: flex;
    justify-content: space-between;
  }
 .tweet-logos {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
   font-size: 16px;
   margin-right: 10px;
   margin-top: 0px;
+  margin-bottom: 5px;
+}
+#eachTweet:hover {
+  font-weight: 700;
+  box-shadow: 5px 10px #86a1bb;
+}
+
+#eachTweet:hover .far{
+  visibility: visible;
+}
+#eachTweet:hover .fas{
+  visibility: visible;
+}
+#eachTweet:hover .fab{
+  visibility: visible;
+}
+#eachTweet:hover .tweeter-handle {
+  visibility: visible;
 }
 
 .tweet {
-
-
-
 height: 205px;
 margin-right: 35px;
 margin-left: 45px;
 }
+.far {
+  visibility: hidden;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.fas {
+  visibility: hidden;
+  position: absolute;
+  bottom: 3px;
+  right: 35px;
+}
+.fab {
+  visibility: hidden;
+  position: absolute;
+  bottom: 3px;
+  right: 70px;
+}
+
 .shadow {
   position: absolute;
   
@@ -125,6 +166,14 @@ border-top-width: 0px;
 visibility: hidden;
 
 }
-/*
+@media only screen and (min-width: 1024px) {
+
+
+
+
+}
+
+
+  /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

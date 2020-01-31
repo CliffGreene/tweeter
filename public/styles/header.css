@@ -6,18 +6,81 @@
     height: px;
     width: 100%;
     z-index: 4;
-    
-    font-family: "source sans pro";
 }
-    header div img {
-       
-        margin-top: 120px;
-           
-          
-        
-    }
-header div h2 {
-    margin-top:0;
-    padding:0;
-    
+header div h2{
+    margin-top: 5px;
+    padding: 10px 0px 20px 0px;
+    font-family: source sans pro;
 }
+header div img {
+    margin-top: 120px;
+}
+nav {
+        position: fixed;
+        color: #ffffff;
+        background-color: #4056A1;
+        padding: 20px;
+        width: 100%;
+        z-index: 11;
+        height: 120px;
+         display: flex ;
+         justify-content: space-between;
+        }
+nav span {
+        font-family: "bungee"
+        }
+     
+
+.title {
+    font-family : bungee;
+}
+.newTweetInvite {
+    position: relative;
+    font-family : bungee;
+    font-size: 20px;
+    padding: 0px 10px 0px 75px;
+    width: 200px;
+}
+#composeButton {
+    height: 40px;
+    position: absolute;
+  top : 27px;
+   right: 15px;
+}
+/*@media only screen and (min-width: 600px) {
+.profile-header{
+    width: 33.3%;
+    float: left;
+  }
+.profilePic{
+    height: 200px;
+}
+.title{
+    font-size: 50px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.newTweetInvite{
+    width: 400px;
+    font-size: 25px;
+    padding:25px;
+}
+
+#composeButton{
+    height: 60px;
+    right:0px;
+    top: 10px;
+}
+
+#sendForm{
+    margin-top: 100px;
+    width: 66.6%;
+    float: right;
+}
+#tweets-container{
+    width: 66.6%;
+    float: right;
+}
+
+}*/

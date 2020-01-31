@@ -1,74 +1,83 @@
-$(document).ready(function(){
+$(document).ready(function() {
  
-  $("#sendForm").on('submit', function(event){
+  $("#sendForm").on('submit', function(event) {
+    
     event.preventDefault();
-    
-    $.ajax({
-       method: "POST",
-       url: "/tweets",
-       data: $(this).serialize(),
-     }).then(function(msg) {console.log(msg)})
-
-    /*
-     const loadTweets = function() {
-      $.ajax("/tweets", { method: "GET "})
-      .then(function(tub) {
-        
-        renderTweets(tub);
-        
+    $("#emptyError").fadeOut(2000);
+    $("#lengthError").fadeOut(1000);
+    let charcount = $(this).serialize();
+    if (charcount.length > 145) {
+      
+      $("#lengthError").fadeIn(1000);
+       
+    } else if (charcount.length < 6) {
+      $("#emptyError").fadeIn(1000);
+    } else {
+      $("#tweetError").css("display","none");
+      $('#emptyError').css("visibility", "hidden");
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize(),
+      }).then(function(msg) {
+        loadTweets(msg);
+        $("textarea").val('');
+        $(".counter").text(140);
       });
-     }; */
-  
- //console.log(loadTweets())
-  /*
-  $(function() {
-   
-    const $button = $('#load-more-posts');
-    $button.on('click', function () {
-      console.log('Button clicked, performing ajax call...');
-      $.ajax('more-posts.html', { method: 'GET' })
-      .then(function (morePostsHtml) {
-        console.log('Success: ', morePostsHtml);
-        $button.replaceWith(morePostsHtml);
-      });
-    });
-  */
-  
-});
-
-const loadTweets = function() {
-  $.ajax('/tweets', {method: "GET" })
-  .then(function(data) {
-    console.log(data)
-    renderTweets(data);
-    
+    }
   });
- };
-loadTweets();
 
- let data = [
+  if ($("#sendForm"))
+
+    $("#composeButton").on("click", function() {
+      if ($("#sendForm").is(":visible")) {
+        $("#sendForm").slideUp("slow");
+      } else {
+        $("#sendForm").slideDown("slow");
+    
+      }
+    });
+  const loadTweets = function() {
+    $.ajax('/tweets', {method: "GET" })
+      .then(function(data) {
+    
+        renderTweets(data);
+    
+      });
+  };
+  loadTweets();
+
+  let data = [
   
-]
+  ];
 
- const renderTweets = function(data) {
+  const renderTweets = function(data) {
+  
+    $('#tweets-container').empty();
    
-   let i = 0;
-   while (i < data.length) {
-      $('#tweets-container').append($(createTweetElement(data[i])));
+    for (const tweet of data) {
+      $('#tweets-container').prepend($(createTweetElement(tweet)));
      
-      ++i
-   }
-   console.log(data[i]);
-}
-// loops through tweets
- // calls createTweetElement for each tweet
- // takes return value and appends it to the tweets container
+     
+    }
+   
+  };
 
+  const daysAgo = function(num) {
+    let numOfDays = Math.floor((new Date() - new Date(num)) / 86400000);
+    if (numOfDays === 0) {
+      return ("Today");
+    } else if (numOfDays === 1) {
+      return ("Yesterday");
+    } else return `${numOfDays} days ago`;
+  };
  
- const createTweetElement = function(tweet) {
-   let $tweet = $(`<article class="tweet" >  
-   <header class="tweet-header">
-     <div class="shadow">
+ 
+
+  const createTweetElement = function(tweet) {
+    let $tweet = $(`<article class="tweet" >  
+   <header class="tweet-header" id="eachTweet">
+    
        
      </div>
          <img class="tweet-avatar" src="${tweet.user["avatars"]}" 
@@ -80,22 +89,18 @@ loadTweets();
     
      
      <footer class="tweet-foot">
-       <p class="date">${tweet.created_at}</p> 
-       <p class="tweet-logos">logos</p>          
-     </footer>
+       <p class="date">${daysAgo(tweet.created_at)}</p> 
+       <i class="fab fa-font-awesome-flag"></i>
+       <i class="fas fa-retweet"></i>
+       <i class="far fa-thumbs-up"></i>
+        </footer>
 
    </header>
    
- </article>` ).addClass('tweet');
-   // ...
-   return $tweet;
- }
- renderTweets(data);
-})
-
-     /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+ </article>`).addClass('tweet');
+    // ...
+    return $tweet;
+  };
+  renderTweets(data);
+});
 

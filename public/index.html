@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />-->
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -9,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i&display=swap" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="styles/nav.css" />
+    <!---<link rel="stylesheet" href="styles/nav.css" />-->
+    <script src="https://kit.fontawesome.com/c5a3c8d880.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/new-tweet.css" />
     <!-- External JS -->
@@ -18,19 +20,24 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/tweet-mouseover.js"></script>
+    
   
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav link rel="styles" href="styles/nav.css">
-      <span >tweeter</span>
+    <nav class="header" >
+      <div class="title">Tweeter</div>
+       <div class="newTweetInvite"> What's in your mind?
+        <img id="composeButton" style="text-align: center" src="/images/handdown.png">
+        </div>
+      
+      
     </nav>
     
-    <header class="profile-header" link rel="styles" href="styles/header.css">
+    <header class="profile-header">
       <div style="text-align: center;">
-          <img style="text-align: center" src="/images/profile-hex.png"> 
+          <img style="text-align: center" class="profilePic" src="/images/profile-hex.png"> 
       </div>
       
       <div style="text-align: center;">
@@ -39,22 +46,23 @@
     </header>
     <!-- Page-specific (main) content here -->
     
-    <main id="tweets-container"  >
-      <section class="new-tweet" >
+   
+  
+      
+      <section class="new-tweet" id="composeTweet">
         
-        <form method="POST" id="sendForm" action="/tweets" link rel="styles" href="styles/new-tweet.css">
+        <form method="POST" id="sendForm" action="tweets">
           <textarea class="newTweetField" style="resize: none;" name="text" placeholder="Do you think it be like it is? Or don't it?"></textarea>
-          <div></div>
-          <input  type="submit" value="Tweet">
+          <span id="emptyError">"No thoughts? No Tweet.</span> <div></div>
+          <input  type="submit" value="Tweet"> 
+          <span id="lengthError">"Tweet is too long, please delete thoughts."</span>
           <span class="counter">140</span>
         </form>
       </section>
-    </main> 
 
-      <article class="tweet" >  
-        
-      </article> 
+      <main id="tweets-container"  >
       
+    </main> 
     
   </body>
 </html>

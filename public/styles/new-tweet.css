@@ -1,38 +1,38 @@
-body main section form {
+
+#sendForm {
     padding: 20px 20px 50px 20px;
+    display:none;
   
-    
     margin-right: 0px;
     z-index: 10;
     font-size: 25px;
     font-family: "source sans pro";
      
     }
-body main section form textarea {
+body section form textarea {
     background-color:rgba(0, 0, 0, 0);
     border-top: 0px;
     border-right: 0px;
     border-left: 0px;
     outline:none;
     padding-top: 20px;
-    
-    
+    line-height: 20px;
     font-size: 20px;
-    
+    font-family: source sans pro;
     color: rgb(75, 61, 49);
-    
-    
     border-bottom-width: 4px;
     border-bottom-color:rgb(75, 61, 49);
     width: 100%;
+    
  }
- body main section form input {
-     font-size: 20px;
+ body section form input {
+    margin-left: 50px; 
+    font-size: 20px;
      color: rgb(255, 255, 255);
      background-color: #4056A1;
      font-family: bungee;
  }
- body main section form span {
+ body section form span {
     position: absolute;
     
     color: rgb(75, 61, 49);
@@ -45,3 +45,40 @@ body main section form textarea {
     font-family: "bungee";
 
  }
+#lengthError{
+    display: none;
+    height: 25px;
+    font-size: 16px;
+    padding-right: 65px;
+    margin-top: 4px;
+    color: red;
+    border: solid;
+    line-height: 20px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    font-family: source sans pro;
+}
+#emptyError{
+    position: absolute;
+    bottom: 187px;
+    left: 150px;
+    display:none;
+    height: 20px;
+    font-size: 16px;
+    margin: 5px;
+    height: 50px;
+    padding: 10px;
+    color: red;
+    text-align: left;
+   
+    
+    font-family: source sans pro;
+    
+}
+
+#compose {
+height : 50px;
+align : right;
+
+}
