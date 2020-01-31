@@ -11,6 +11,14 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Screenshots
+
+!["Screenshot of empty field submission error"](https://github.com/CliffGreene/tweeter/blob/master/docs/empty%20field%20submission%20error.png?raw=true)
+
+!["Screenshot of empty tweet field"](https://github.com/CliffGreene/tweeter/blob/master/docs/empty%20tweet%20field.png?raw=true)
+
+!["Screenshot of tweet too long error"](https://github.com/CliffGreene/tweeter/blob/master/docs/tweet%20too%20long%20error.png?raw=true)
+
 ## Dependencies
 
 - Express
